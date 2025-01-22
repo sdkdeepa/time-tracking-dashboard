@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script src="index.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,9 +15,40 @@
   </style> -->
 </head>
 <body>
+  <!-- section for person's heading -->
+  <section class="activity-tracker">
+    <section class="activity-tracker__menu">
+      <div class="activity-tracker__owner">
+        <img src="/images/image-jeremy.png" alt="image of a person who is tracking the activity">
+        <div class="activity-tracker__owner-container">
+          <p class="activity-tracker__owner-report">
+            Report for
+          </p>
+          <h1 class="activity-tracker__owner-name">  Jeremy Robson </h1>
+        </div>
+      </div>
+      <div class="activity-tracker__options">
+        <button class="activity-tracker__option" data-option="daily">Daily</button>
+        <button class="activity-tracker__option" data-option="daily">Weekly</button>
+        <button class="activity-tracker__option" data-option="daily">Monthly</button>
+      </div>
+    </section>
+    <!-- card section -->
+     <section class="activity-tracker__activity work">
+      <div class="activity__bg">
+        <img src="images/icon-work.svg" alt="work activity tracker card">
+      </div>
+      <div class="activity__info">
 
-  Report for
-  Jeremy Robson
+
+      </div>
+
+     </section>
+
+  </section>
+
+
+
 
   Daily
   Weekly
@@ -76,7 +105,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Deepa Subramanian</a>.
   </div>
 </body>
 </html>
