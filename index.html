@@ -4,254 +4,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Time tracking dashboard</title>
+  <meta name="author" content="sdkdeepa">
+  <meta name="description" content="Time tracking">
+  <link rel="icon" type="image/png" size="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="javascript/index.js"></script>
+  <title>Time Tracking Dashboard</title>
 </head>
 
 <body>
-  <!-- section for person's heading -->
-  <section class="activity-tracker">
-    <section class="activity-tracker__menu">
-      <div class="activity-tracker__owner">
-        <img src="images/image-jeremy.png" alt="image of a person who is tracking the activity">
-        <div class="activity-tracker__owner-container">
-          <p class="activity-tracker__owner-report">
-            Report for
-          </p>
-          <h1 class="activity-tracker__owner-name"> Jeremy Robson </h1>
+  <main>
+    <section class="container">
+      <div class="profile__card bg-card-800">
+        <div class="profile__top bg-primary-400">
+          <!-- profile section -->
+          <div class="top-container">
+            <img src="images/image-jeremy.png" alt="Image of a person">
+            <div class="top-info">
+              <p class="fs-300 fw-regular">Report for</p>
+              <h1 class="fs-600 fw-light">Jeremy Robson</h1>
+            </div>
+          </div>
+        </div>
+        <!-- cards -->
+        <div class="profile__bottom fw-regular">
+          <a class="link" href="#" data-timeframe="daily">Daily</a>
+          <a class="link" href="#" data-timeframe="weekly">Weekly</a>
+          <a class="link" href="#" data-timeframe="monthly">Monthly</a>
         </div>
       </div>
-      <div class="activity-tracker__options">
-        <button class="activity-tracker__option" data-option="daily">Daily</button>
-        <button class="activity-tracker__option" data-option="daily">Weekly</button>
-        <button class="activity-tracker__option" data-option="daily">Monthly</button>
-      </div>
-    </section>
-    <!-- Work card section -->
-    <section class="activity-tracker__activity work">
-      <div class="activity__bg">
-        <img src="images/icon-work.svg" alt="work activity tracker card">
-      </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Work</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z"
-                fill="#5A1CBB" fill-rule="evenodd" />
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe">10hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week -
-            <p class="time">8hrs</p>
+      <!-- work -->
+      <div class="card work-card bg-card-header-work tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">Card Type</h2>
+            <button class="button">
+              <div class="card-type"></div>
+            </button>
+          </div>
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
           </div>
         </div>
       </div>
-      <!-- Play card section -->
-    </section>
-    <section class="activity-tracker__activity play ">
-      <div class="activity__bg">
-        <img src="images/icon-play.svg" alt="play activity tracker card">
-      </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Play</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z"
-                fill="#5A1CBB" fill-rule="nonzero" />
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe"> 32hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week - </p>
-            <p class="time">36hrs</p>
+      <!-- play -->
+      <div class="card play-card bg-card-header-play tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">
+              Card Type
+            </h2>
+            <button class="button">
+              <div class="dots"></div>
+            </button>
+          </div>
+
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Study card section -->
-    <section class="activity-tracker__activity study ">
-      <div class="activity__bg">
-        <img src="images/icon-study.svg" alt="study activity tracker card">
-      </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Study</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <g fill="#5A1CBB" fill-rule="nonzero">
-                <path
-                  d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z" />
-              </g>
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe"> 4hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week - </p>
-            <p class="time">7hrs</p>
+      <!-- study -->
+      <div class="card study-card bg-card-study tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">Card Type</h2>
+            <button class="button">
+              <div class="dots"></div>
+            </button>
+          </div>
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Excercise card section -->
-    <section class="activity-tracker__activity exercise ">
-      <div class="activity__bg">
-        <img src="images/icon-exercise.svg" alt="play activity tracker card">
-      </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Exercise</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <g fill="#5A1CBB" fill-rule="nonzero">
-                <path
-                  d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z" />
-              </g>
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe"> 4hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week - </p>
-            <p class="time">5hrs</p>
+      <!-- exercise -->
+      <div class="card exercise-card bg-card-exercise tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">Card Type</h2>
+            <button class="button">
+              <div class="dots"></div>
+            </button>
+          </div>
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Social card section -->
-    <section class="activity-tracker__activity social ">
-      <div class="activity__bg">
-        <img src="images/icon-social.svg" alt="social activity tracker card">
+      <!-- social-card-->
+      <div class="card social-card bg-card-social tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">Card Type</h2>
+            <button class="button">
+              <div class="dots"></div>
+            </button>
+          </div>
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
+          </div>
+        </div>
       </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Social</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <g fill="#5A1CBB" fill-rule="nonzero">
-                <path
-                  d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z" />
-              </g>
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe">5hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week - </p>
-            <p class="time">10hrs</p>
+      <!-- self-care -->
+      <div class="card self-care-card bg-card-self-care tilt-card">
+        <div class="card-top">
+          &nbsp;
+        </div>
+        <div class="card-bottom">
+          <div class="card-bottom-header">
+            <h2 class="card-type">Card Type</h2>
+            <button class="button">
+              <div class="dots"></div>
+            </button>
+          </div>
+          <div class="card-bottom-container">
+            <h3 class="current-hours">Hours</h3>
+            <p class="previous-hours">Previous hours</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Self care card section -->
-    <section class="activity-tracker__activity selfcare">
-      <div class="activity__bg">
-        <img src="images/icon-self-care.svg" alt="selfcare activity tracker card">
-      </div>
-      <div class="activity__info">
-        <header class="activity__header">
-          <h2 class="activity__name">Self Care</h2>
-          <button class="activity__options">
-            <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg">
-              <g fill="#5A1CBB" fill-rule="nonzero">
-                <path
-                  d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z" />
-              </g>
-            </svg>
-          </button>
-        </header>
-        <div class="activity__timeframes">
-          <h3 class="activity__current-timeframe"> 2hrs</h3>
-          <div class="activity__previous-timeframe">
-            <p class="time-window">Last Week - </p>
-            <p class="time">2hrs</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  </main>
 
-  </section>
-
-
-
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Deepa Subramanian</a>.
-  </div>
 </body>
 
 </html>
-
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-<!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
